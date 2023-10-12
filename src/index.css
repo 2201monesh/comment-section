@@ -3,3 +3,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.main-section{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.input-comment-section{
+  width: 100vw;
+  height: 20vh;
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}

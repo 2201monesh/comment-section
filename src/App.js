@@ -1,9 +1,9 @@
-
+import InputComment from "./InputComment";
 
 function App() {
   return (
-    <div>
-      helloo
+    <div className="main-section">
+      <InputComment />
     </div>
   );
 }
