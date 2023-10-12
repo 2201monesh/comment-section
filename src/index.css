@@ -8,15 +8,44 @@
   width: 100vw;
   height: 100vh;
   position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: hsl(223, 19%, 93%);
 }
 
 .input-comment-section{
-  width: 100vw;
-  height: 20vh;
-  background-color: aquamarine;
+  width: 35vw;
+  height: 15vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  align-items: flex-start;
   position: absolute;
   bottom: 0;
+  padding: 16px;
+  /* border-top: 1px solid gray; */
+  background-color: white;
+  margin: 40px 0px;
+}
+
+.profile-image{
+  width: 35px;
+  height: 35px;
+}
+
+.input-box-comment{
+  width: 350px;
+  height: 65px;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.button{
+  width: 90px;
+  height: 35px;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  background-color: hsl(238, 40%, 52%);
 }
