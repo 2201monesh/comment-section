@@ -1,4 +1,5 @@
 import logo2 from './images/avatars/image-amyrobson.png';
+import { BsFillReplyFill } from 'react-icons/bs';
 
 function CommentInfo() {
   return (
@@ -9,8 +10,11 @@ function CommentInfo() {
             <p className='username'>username</p>
         </div>
         <div className="comment-info-top-right">
-            <button>Reply</button>
+            <button className='button-reply'> <BsFillReplyFill /> Reply</button>
         </div>
+      </div>
+      <div className="comment-info-bottom">
+        <p className='comment-info-text'>kodn dfknvnf  nnvn nnao ionfanna nfkdnn oa knfdanvnkn nmafenon nan mavonan noaenfknean nanfvna  knfkaennk knknfakn nkan naknk nrjngntr  kfdk </p>
       </div>
     </div>
   )

@@ -54,6 +54,7 @@
   border: 1px solid gray;
   border-radius: 8px;
   padding: 12px;
+  color: gray;
 }
 
 .button{
@@ -65,10 +66,19 @@
   background-color: hsl(238, 40%, 52%);
 }
 
+.button-reply{
+  width: 90px;
+  /* height: 35px; */
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  color: hsl(238, 40%, 52%);
+}
+
 .comment-info{
   margin-top: 40px;
   width: 35vw;
-  height: 15vh;
+  height: 16vh;
   padding: 16px;
   background-color: white;
   border-radius: 4px;
@@ -77,8 +87,15 @@
 .comment-info-top{
   display: flex;
   justify-content: space-between;
+  margin-bottom: 8px;
 }
 
 .comment-info-top-left{
   display: flex;
+  align-items: center;
+}
+
+.comment-info-text{
+  font-size: small;
+  color: gray;
 }
