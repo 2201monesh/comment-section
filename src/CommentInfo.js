@@ -1,7 +1,7 @@
 import logo2 from './images/avatars/image-amyrobson.png';
 import { BsFillReplyFill } from 'react-icons/bs';
 
-function CommentInfo() {
+function CommentInfo({comment}) {
   return (
     <div className="comment-info">
       <div className="comment-info-top">
@@ -14,7 +14,7 @@ function CommentInfo() {
         </div>
       </div>
       <div className="comment-info-bottom">
-        <p className='comment-info-text'>kodn dfknvnf  nnvn nnao ionfanna nfkdnn oa knfdanvnkn nmafenon nan mavonan noaenfknean nanfvna  knfkaennk knknfakn nkan naknk nrjngntr  kfdk kodn dfknvnf  nnvn nnao ionfanna nfkdnn oa knfdanvnkn nmafenon nan mavonan noaenfknean nanfvna  knfkaennk knknfakn nkan naknk nrjngntr  kfdk kodn dfknvnf  nnvn nnao ionfanna nfkdnn oa knfdanvnkn nmafenon nan mavonan noaenfknean nanfvna  knfkaennk knknfakn nkan naknk nrjngntr  kfdk</p>
+        <p className='comment-info-text'>{comment}</p>
       </div>
     </div>
   )

@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="main-section">
       <div className="main-top">
-        {comments.map(() => (<CommentInfo />))}
+        {comments.map((comment) => (<CommentInfo comment={comment} />))}
       </div>
       <div className="main-bottom">
         <InputComment onChange={handleClick} />
