@@ -10,10 +10,18 @@
 .main-section{
   width: 100vw;
   height: 100vh;
-  position: relative;
+  /* position: relative; */
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
   background-color: hsl(223, 19%, 93%);
+}
+
+.main-top{
+  height: 75vh;
+  overflow-y: scroll;
+  /* margin-bottom: 50px; */
 }
 
 .input-comment-section{
@@ -22,7 +30,7 @@
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   padding: 16px;
   /* border-top: 1px solid gray; */
@@ -76,9 +84,10 @@
 }
 
 .comment-info{
-  margin-top: 40px;
+  margin-top: 20px;
   width: 35vw;
-  height: 16vh;
+  /* height: 16vh; */
+  word-wrap: break-word;
   padding: 16px;
   background-color: white;
   border-radius: 4px;
