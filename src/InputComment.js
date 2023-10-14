@@ -10,7 +10,11 @@ function InputComment({onChange}) {
   }
 
   const btnClick = () => {
-    onChange(comment);
+    if(comment.length == 0){
+      alert("Add something in input field");
+    }else{
+      onChange(comment);
+    }
     setComment('');
   }
 
