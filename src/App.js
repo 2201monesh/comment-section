@@ -7,13 +7,13 @@ function App() {
   const [comments, setComments] = useState([]);
 
   const handleClick = (event) => {
-    setComments([...comments, event]);
+    setComments([...comments, {text: event, replies: []}]);
   }
 
   return (
     <div className="main-section">
       <div className="main-top">
-        {comments.map((comment) => (<CommentInfo comment={comment} />))}
+        {comments.map((comment, commentIndex) => (<CommentInfo key={commentIndex} comment={comment.text} />))}
       </div>
       <div className="main-bottom">
         <InputComment onChange={handleClick} />

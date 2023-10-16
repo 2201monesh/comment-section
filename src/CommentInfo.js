@@ -1,7 +1,13 @@
 import logo2 from './images/avatars/image-amyrobson.png';
 import { BsFillReplyFill } from 'react-icons/bs';
+import { useState } from 'react';
 
 function CommentInfo({comment}) {
+
+  const handleReplyClick = () => {
+    
+  }
+
   return (
     <div className="comment-info">
       <div className="comment-info-top">
@@ -10,7 +16,7 @@ function CommentInfo({comment}) {
             <p className='username'>username</p>
         </div>
         <div className="comment-info-top-right">
-            <button className='button-reply'> <BsFillReplyFill /> Reply</button>
+            <button onClick={handleReplyClick} className='button-reply'> <BsFillReplyFill /> Reply</button>
         </div>
       </div>
       <div className="comment-info-bottom">
