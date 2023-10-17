@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logo1 from './images/avatars/image-juliusomo.png';
+import { BsFillReplyFill } from 'react-icons/bs';
 
 const CommentSection = () => {
   const [input, setInput] = useState('');
@@ -46,21 +47,33 @@ const CommentSection = () => {
       <div className="commentInfo">
         
           {comments.map((comment, commentIndex) => (
-            <div className="commentInfoCard">
-             <div className="commentInfoCard-top">
-              <div className="commentInfoCard-top-left">
-                <img className='profile-image' src={logo1} alt="" />
-                <p className='username'>username</p>
-              </div>
-              <div className="commentInfoCard-top-right">
-                 <button onClick={() => handleReplySubmit(commentIndex, prompt('Reply:'))}>
-                   Reply
+            <div className="commentInfoCard-outer">
+              <div className="commentInfoCard">
+               <div className="commentInfoCard-top">
+                <div className="commentInfoCard-top-left">
+                  <img className='profile-image' src={logo1} alt="" />
+                  <p className='username'>username</p>
+                </div>
+                <div className="commentInfoCard-top-right">
+                 <button className='reply-button' onClick={() => handleReplySubmit(commentIndex, prompt('Reply:'))}>
+                   <BsFillReplyFill /> Reply
                  </button>
+                </div>
+               </div>
+               <p>{comment.text}</p>
               </div>
-             </div>
-             <p>{comment.text}</p>
+
+              {comment.replies.length >= 1 && <div className="commentInfoCard-reply">
+                {comment.replies.map((reply, replyIndex) => (
+                  <div className="card" key={replyIndex} >
+                    {reply}
+                  </div>
+                ))}
+              </div>}
             </div>
           ))}
+
+          
         
       </div>
 

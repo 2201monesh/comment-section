@@ -11,18 +11,23 @@
   width: 0;
 }
 
+p{
+  font-size: medium;
+}
+
 .main-section{
   width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   position: relative;
+  background-color: hsl(228, 33%, 97%);
 }
 
 .input-section{
-  height: 20vh;
+  height: 16vh;
   width: 500px;
   /* background-color: aqua; */
   position: absolute;
@@ -31,7 +36,10 @@
   justify-content: center;
   align-items: flex-start;
   padding: 20px;
-  border-top: 1px solid gray;
+  /* border-top: 1px solid gray; */
+  background-color: white;
+  margin-bottom: 40px;
+  border-radius: 8px;
 }
 
 textarea{
@@ -54,8 +62,53 @@ textarea{
   background-color: hsl(238, 40%, 52%);
 }
 
-.profile-image{
-  width: 30px;
-  height: 30px;
+.reply-button{
+  background-color: transparent;
+  border: none;
+  color: hsl(238, 40%, 52%);
+  cursor: pointer;
 }
 
+.commentInfo{
+  width: 500px;
+  height: 70vh;
+  margin-top: 40px;
+  overflow-y: scroll;
+}
+
+.commentInfoCard{
+  width: 500px;
+  word-wrap: break-word;
+  background-color: white;
+  padding: 18px 22px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.card{
+  width: 480px;
+  background-color: white;
+  border-radius: 8px;
+  word-wrap: break-word;
+  padding: 18px 22px;
+  margin: 8px 0px 8px 20px;
+}
+
+.profile-image{
+  width: 25px;
+  height: 25px;
+  margin-right: 8px;
+}
+
+.commentInfoCard-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.commentInfoCard-top-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
