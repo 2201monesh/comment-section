@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logo1 from './images/avatars/image-juliusomo.png';
+import logo2 from './images/avatars/image-amyrobson.png';
 import { BsFillReplyFill } from 'react-icons/bs';
 
 const CommentSection = () => {
@@ -14,6 +15,8 @@ const CommentSection = () => {
     if (input.trim() !== '') {
       setComments([...comments, { text: input, replies: [] }]);
       setInput('');
+    }else{
+      alert("Enter comment in input field...")
     }
   };
 
@@ -27,22 +30,6 @@ const CommentSection = () => {
 
   return (
     <div className='main-section'>
-      
-      {/* <div>
-        {comments.map((comment, commentIndex) => (
-          <div className='card' key={commentIndex}>
-            {comment.text}
-            <button onClick={() => handleReplySubmit(commentIndex, prompt('Reply:'))}>
-              Reply
-            </button>
-            {comment.replies.map((reply, replyIndex) => (
-              <div className='card' key={replyIndex} style={{ marginLeft: '20px' }}>
-                {reply}
-              </div>
-            ))}
-          </div>
-        ))}
-      </div> */}
 
       <div className="commentInfo">
         
@@ -52,7 +39,7 @@ const CommentSection = () => {
                <div className="commentInfoCard-top">
                 <div className="commentInfoCard-top-left">
                   <img className='profile-image' src={logo1} alt="" />
-                  <p className='username'>username</p>
+                  <p className='username'>Monesh</p>
                 </div>
                 <div className="commentInfoCard-top-right">
                  <button className='reply-button' onClick={() => handleReplySubmit(commentIndex, prompt('Reply:'))}>
@@ -66,15 +53,19 @@ const CommentSection = () => {
               {comment.replies.length >= 1 && <div className="commentInfoCard-reply">
                 {comment.replies.map((reply, replyIndex) => (
                   <div className="card" key={replyIndex} >
-                    {reply}
+                    <div className="card-top">
+                       <img className='profile-image' src={logo2} alt="" />
+                       <p className='username'>User</p>
+                    </div>
+                    <div className="card-bottom">
+                      {reply}
+                    </div>
                   </div>
                 ))}
               </div>}
             </div>
           ))}
-
-          
-        
+ 
       </div>
 
       <div className='input-section'>

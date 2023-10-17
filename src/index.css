@@ -94,6 +94,12 @@ textarea{
   margin: 8px 0px 8px 20px;
 }
 
+.card-top{
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
 .profile-image{
   width: 25px;
   height: 25px;
